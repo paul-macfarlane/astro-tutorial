@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
-import Navigation, { PAGE_TITLES } from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import { PAGE_TITLES } from "../components/Navigation.astro";
 import "../styles/global.css";
 ---
 
@@ -13,10 +14,14 @@ import "../styles/global.css";
     <title>{PAGE_TITLES["/"]}</title>
   </head>
   <body>
-    <Navigation />
+    <Header />
 
     <h1>{PAGE_TITLES["/"]}</h1>
 
     <Footer />
+
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
