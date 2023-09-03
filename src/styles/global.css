@@ -3,6 +3,11 @@ html {
   font-family: sans-serif;
 }
 
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -32,6 +37,10 @@ h1 {
   height: 5px;
   margin-bottom: 10px;
   background-color: #4c1d95;
+}
+
+.dark .hamburger .line {
+  background-color: #fff;
 }
 
 .nav-links {
@@ -80,4 +89,53 @@ h1 {
   .hamburger {
     display: none;
   }
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+.dark .nav-links a:hover {
+  background-color: blue;
+}
+
+.dark .nav-links a:focus {
+  background-color: blue;
+}
+
+.social {
+  color: #fff;
+  background-color: #4c1d95;
+  border: #4c1d95;
+}
+
+.dark .social {
+  color: #4c1d95;
+  background-color: #fff;
+  border: #fff;
+}
+
+.tag-link {
+  color: #4c1d95;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.25em;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1.15em;
+  background-color: #f8fcfd;
+}
+
+.classic-link {
+  color: #4c1d95;
+}
+
+.dark .classic-link {
+  color: #fff;
 }
