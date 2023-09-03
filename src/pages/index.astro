@@ -1,5 +1,11 @@
 ---
+export const PAGE_TITLES = {
+  "/": "Home Page",
+  "/about/": "About Me",
+  "/blog/": "My Astro Learning Blog",
+};
 
+const pageTitle = "Home Page";
 ---
 
 <html lang="en">
@@ -8,13 +14,13 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{PAGE_TITLES["/"]}</title>
   </head>
   <body>
-    <a href="/blog/">Blog</a>
+    <a href="/blog/">{PAGE_TITLES["/blog"]}</a>
     <br />
-    <a href="/about/">About</a>
+    <a href="/about/">{PAGE_TITLES["/about/"]}</a>
 
-    <h1>My Astro Learning Blog</h1>
+    <h1>{pageTitle}</h1>
   </body>
 </html>
