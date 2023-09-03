@@ -1,13 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import Navigation, { PAGE_TITLES } from "../components/Navigation.astro";
 import "../styles/global.css";
-
-export const PAGE_TITLES = {
-  "/": "Home Page",
-  "/about/": "About Me",
-  "/blog/": "My Astro Learning Blog",
-};
-
-const pageTitle = "Home Page";
 ---
 
 <html lang="en">
@@ -19,10 +13,10 @@ const pageTitle = "Home Page";
     <title>{PAGE_TITLES["/"]}</title>
   </head>
   <body>
-    <a href="/blog/">{PAGE_TITLES["/blog"]}</a>
-    <br />
-    <a href="/about/">{PAGE_TITLES["/about/"]}</a>
+    <Navigation />
 
-    <h1>{pageTitle}</h1>
+    <h1>{PAGE_TITLES["/"]}</h1>
+
+    <Footer />
   </body>
 </html>

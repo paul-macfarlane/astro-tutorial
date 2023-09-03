@@ -1,6 +1,7 @@
 ---
-import { PAGE_TITLES } from "./index.astro";
 import "../styles/global.css";
+import Navigation, { PAGE_TITLES } from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const identity = {
   firstName: "Paul",
@@ -31,8 +32,6 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
-
-const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -40,22 +39,9 @@ const skillColor = "navy";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{PAGE_TITLES["/about/"]}</title>
-    <style define:vars={{ skillColor }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: green;
-        color: var(--skillColor);
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
-    <a href="/">{PAGE_TITLES["/"]}</a>
-    <br />
-    <a href="/blog/">{PAGE_TITLES["/blog/"]}</a>
+    <Navigation />
 
     <h1>{PAGE_TITLES["/about/"]}</h1>
 
@@ -102,5 +88,7 @@ const skillColor = "navy";
         <p>My goal is not 3 days.</p>
       )
     }
+
+    <Footer />
   </body>
 </html>

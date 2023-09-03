@@ -1,6 +1,7 @@
 ---
-import { PAGE_TITLES } from "./index.astro";
 import "../styles/global.css";
+import Navigation, { PAGE_TITLES } from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -12,9 +13,7 @@ import "../styles/global.css";
     <title>{PAGE_TITLES["/blog/"]}</title>
   </head>
   <body>
-    <a href="/">{PAGE_TITLES["/"]}</a>
-    <br />
-    <a href="/about/">{PAGE_TITLES["/about/"]}</a>
+    <Navigation />
 
     <h1>{PAGE_TITLES["/blog/"]}</h1>
 
@@ -24,5 +23,7 @@ import "../styles/global.css";
       <li><a href="/posts/post-2/">Post 2</a></li>
       <li><a href="/posts/post-3/">Post 3</a></li>
     </ul>
+
+    <Footer />
   </body>
 </html>
