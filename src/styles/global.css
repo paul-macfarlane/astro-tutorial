@@ -129,7 +129,21 @@ h1 {
   border-radius: 0.5em;
   padding: 0.5em 1em;
   font-size: 1.15em;
-  background-color: #f8fcfd;
+  background-color: #4c1d95;
+  color: #fff;
+}
+
+.tag-link {
+  color: #fff;
+}
+
+.dark .tag-link {
+  color: #4c1d95;
+}
+
+.dark .tag {
+  background-color: #fff;
+  color: #4c1d95;
 }
 
 .classic-link {
