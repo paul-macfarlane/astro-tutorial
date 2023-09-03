@@ -1,10 +1,13 @@
 ---
+import BaseLayout from "./BaseLayout.astro";
+
 const { frontmatter } = Astro.props;
 ---
 
-<a href="/blog">Back to blog</a>
+<BaseLayout pageTitle={frontmatter.title}>
+  <a href="/blog">Back to blog</a>
 
-<h1>{frontmatter.title}</h1>
-<p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-<p>Written by {frontmatter.author}</p>
-<slot />
+  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <p>Written by {frontmatter.author}</p>
+  <slot />
+</BaseLayout>
